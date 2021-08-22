@@ -22,7 +22,7 @@ export default class AddNinja extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="mx-auto container" onSubmit={this.handleSubmit}>
+        <form className="mx-auto container jumbotron" onSubmit={this.handleSubmit}>
           <label htmlFor="name">Name: </label>
           <input
             type="text"

@@ -3,23 +3,27 @@ import React from "react";
 const Ninjas = ({ ninjas, deleteNinja }) => {
   const ninjaList = ninjas.map((ninja) => {
     return (
-      <div className="ninja" key={ninja.id}>
+      <div className="ninja text-capitalize" key={ninja.id}>
         <div>ID: {ninja.id}</div>
-        <div>Name: {ninja.name}</div>
+        <div className="">Name: {ninja.name}</div>
         <div>Age: {ninja.age}</div>
-        <div>Belt: {ninja.belt}</div>
-        <p>-------------------</p>
+        <div className="">Belt: {ninja.belt}</div>
 
         <button
-          className="btn btn-danger mb-4"
+          className="btn btn-danger my-3"
           onClick={() => deleteNinja(ninja.id)}
         >
           Delete Ninja
         </button>
+        <p className="nowrap">-------------------------------------</p>
       </div>
     );
   });
-  return <div className="ninja-list container">{ninjaList}</div>;
+  return (
+    <div className="ninja-list container jumbotron text-center bold">
+      {ninjaList}
+    </div>
+  );
 };
 
 //- Conditional return
